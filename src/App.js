@@ -1,11 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
+import SavingGame from './components/SavingGame';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello</h1>
-    </div>
+    <DndProvider backend={HTML5Backend}>
+      <div className="App">
+        <SavingGame />
+      </div>
+    </DndProvider>
   );
 }
 
